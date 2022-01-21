@@ -15,23 +15,35 @@ SqlAlchemy2UML
 
 
 
+Usage
+-----
 
-Python Boilerplate contains all the boilerplate you need to create a Python package.
+Install as a development dependency in your project, then type `sqla2uml` for help.
 
 
 * Free software: MIT license
-* Documentation: https://sqla2uml.readthedocs.io.
+* Documentation: https://sqla2uml.readthedocs.io. (not working yet)
 
 
 Features
 --------
 
-* TODO
+* Generate UML diagrams from SQLAlchemy models.
+* One must have PlantUML installed.
+* More features / more flexibility to come later.
+
+
+Development
+-----------
+
+* Pull-requests accepted.
+* Participants must adhere to the Python COC (<https://www.python.org/psf/>)
+
 
 Credits
 -------
 
-This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+This package was created with Cruft_ and the `abilian/cookiecutter-abilian-python`_ project template.
 
-.. _Cookiecutter: https://github.com/audreyr/cookiecutter
-.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+.. _Cruft: https://github.com/cruft/cruft
+.. _`abilian/cookiecutter-abilian-python`: https://github.com/abilian/cookiecutter-abilian-python
