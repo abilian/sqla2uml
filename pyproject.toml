@@ -1,8 +1,8 @@
 [tool.poetry]
 name = "sqla2uml"
-version = "0.1.0"
-homepage = "https://github.com/sfermigier/sqla2uml"
-description = "Top-level package for SqlAlchemy2UML."
+version = "0.1.0.post2"
+homepage = "https://github.com/abilian/sqla2uml"
+description = "Convert your SQLAlchemy models to UML diagrams (via PlantUML)"
 authors = ["Abilian SAS <sf@abilian.com>"]
 readme = "README.rst"
 classifiers = [
