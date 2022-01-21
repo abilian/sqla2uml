@@ -1,36 +1,42 @@
 #!/usr/bin/env python
 
 """Tests for `sqla2uml` package."""
+import importlib
 
-import pytest
-from click.testing import CliRunner
+import sqlalchemy as sa
+from sqlalchemy.orm import declarative_base
 
-from sqla2uml import cli
+from sqla2uml.scanner import Scanner
 
-
-@pytest.fixture
-def response():
-    """Sample pytest fixture.
-
-    See more at: http://doc.pytest.org/en/latest/fixture.html
-    """
-    # import requests
-    # return requests.get('https://github.com/audreyr/cookiecutter-pypackage')
+Base = declarative_base()
 
 
-def test_content(response):
-    """Sample pytest test function with the pytest fixture as an argument."""
-    # from bs4 import BeautifulSoup
-    # assert 'GitHub' in BeautifulSoup(response.content).title.string
+class Blog(Base):
+    __tablename__ = "blog"
+
+    id = sa.Column(sa.Integer, primary_key=True, unique=True, autoincrement=True)
+
+    name = sa.Column(sa.UnicodeText, nullable=False, default="")
+    description = sa.Column(sa.UnicodeText, nullable=False, default="")
 
 
-def test_command_line_interface():
-    """Test the CLI."""
-    runner = CliRunner()
-    result = runner.invoke(cli.main)
-    assert result.exit_code == 0
-    assert 'sqla2uml.cli.main' in result.output
+class BlogPost(Base):
+    __tablename__ = "blog_post"
 
-    help_result = runner.invoke(cli.main, ['--help'])
-    assert help_result.exit_code == 0
-    assert '--help  Show this message and exit.' in help_result.output
+    id = sa.Column(sa.Integer, primary_key=True, unique=True, autoincrement=True)
+
+    title = sa.Column(sa.UnicodeText, nullable=False, default="")
+    content = sa.Column(sa.UnicodeText, nullable=False, default="")
+    summary = sa.Column(sa.UnicodeText, nullable=False, default="")
+
+
+# class BlogPostWithPicture(BlogPost):
+#     __tablename__ = "blog_post_w_picture"
+#
+#     picture = sa.Column(sa.LargeBinary)
+
+
+def test_scanner():
+    scanner = Scanner()
+    root_module = importlib.import_module("tests")
+    scanner.scan(root_module)

@@ -19,10 +19,14 @@ packages = [
 ]
 
 
+[tool.poetry.scripts]
+sqla2uml = 'sqla2uml.main:main'
+
+
 [tool.poetry.dependencies]
 python = ">=3.8,<4"
 
-SQLAlchemy = "^1.4.29"
+SQLAlchemy = "^1.4"
 
 
 [tool.poetry.dev-dependencies]
@@ -57,6 +61,7 @@ pyyaml = "*"
 
 # Doc
 restructuredtext_lint = "*"
+devtools = "^0.8.0"
 
 
 [tool.isort]
@@ -66,3 +71,7 @@ profile = "black"
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+
+#[sqla2uml]
+#scan = demo
