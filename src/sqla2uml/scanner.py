@@ -56,7 +56,7 @@ class Scanner:
         self.import_all(module)
 
         result = set()
-        for obj in vars(module).values():
+        for obj in list(vars(module).values()):
             if inspect.ismodule(obj):
                 if not obj.__name__.startswith(module_name):
                     continue
@@ -85,5 +85,9 @@ class Scanner:
             # debug(finder, module_name, name, ispkg, fqname)
             try:
                 importlib.import_module(fqname)
-            except ModuleNotFoundError:
+            except:
+                # FIXME: ignore all errors for now, this needs to be fixed
+                # because this will confuse users
                 pass
+            #except ModuleNotFoundError:
+            #    pass
