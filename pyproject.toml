@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "sqla2uml"
-version = "0.1.1"
+version = "0.1.2"
 homepage = "https://github.com/abilian/sqla2uml"
 description = "Convert your SQLAlchemy models to UML diagrams (via PlantUML)"
 authors = ["Abilian SAS <sf@abilian.com>"]
