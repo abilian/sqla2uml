@@ -25,7 +25,7 @@ Install as a development dependency in your project, then type `sqla2uml` for he
     Options:
       -m, --module TEXT          Package to analyse (recursively)
       -o, --output TEXT          File to output result (defaults to stdout)
-      -p, --properties BOOLEAN   Include properties in diagrams
+      -p, --properties           Include properties in diagrams 
       -x, --exclude TEXT         List of class names to exclude from diagram
       -d, --debug-level INTEGER  Debug level
       --help                     Show this message and exit.

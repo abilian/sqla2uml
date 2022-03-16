@@ -89,5 +89,5 @@ class Scanner:
                 # FIXME: ignore all errors for now, this needs to be fixed
                 # because this will confuse users
                 pass
-            #except ModuleNotFoundError:
+            # except ModuleNotFoundError:
             #    pass

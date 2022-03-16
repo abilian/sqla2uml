@@ -18,13 +18,13 @@ DEFAULT_CONFIG = {
     "--output", "-o", default="-", help="File to output result (defaults to stdout)"
 )
 @click.option(
-    "--properties", "-p", default=False, help="Include properties in diagrams"
+    "--properties", "-p", is_flag=True, help="Include properties in diagrams"
 )
 @click.option(
     "--exclude", "-x", default="", help="List of class names to exclude from diagram"
 )
 @click.option("--debug-level", "-d", default=0, help="Debug level")
-def main(module, exclude, output, properties, debug_level):
+def main(module: str, exclude: str, output: str, properties, debug_level: int):
     config = DEFAULT_CONFIG
 
     scanner = Scanner()
