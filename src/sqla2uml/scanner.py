@@ -80,12 +80,12 @@ class Scanner:
         path = str(Path(module.__file__).parent)
         module_name = str(module.__name__)
 
-        for finder, name, ispkg in pkgutil.walk_packages([path]):
+        for _finder, name, _ispkg in pkgutil.walk_packages([path]):
             fqname = module_name + "." + name
             # debug(finder, module_name, name, ispkg, fqname)
             try:
                 importlib.import_module(fqname)
-            except:
+            except ImportError:
                 # FIXME: ignore all errors for now, this needs to be fixed
                 # because this will confuse users
                 pass

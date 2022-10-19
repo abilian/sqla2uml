@@ -17,9 +17,7 @@ DEFAULT_CONFIG = {
 @click.option(
     "--output", "-o", default="-", help="File to output result (defaults to stdout)"
 )
-@click.option(
-    "--properties", "-p", is_flag=True, help="Include properties in diagrams"
-)
+@click.option("--properties", "-p", is_flag=True, help="Include properties in diagrams")
 @click.option(
     "--exclude", "-x", default="", help="List of class names to exclude from diagram"
 )

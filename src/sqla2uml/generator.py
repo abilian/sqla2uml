@@ -1,5 +1,3 @@
-from devtools import debug
-
 from sqla2uml.scanner import ClassInfo
 
 EXCLUDED = set()
