@@ -26,8 +26,9 @@ sqla2uml = 'sqla2uml.main:main'
 [tool.poetry.dependencies]
 python = ">=3.8,<4"
 
-SQLAlchemy = ">=1.3"
+SQLAlchemy = ">=1.4.42"
 devtools = "*"
+click = "*"
 
 
 [tool.poetry.dev-dependencies]
@@ -73,6 +74,7 @@ restructuredtext_lint = "*"
 
 [tool.poetry.group.dev.dependencies]
 deptry = "^0.6.1"
+poetryup = "^0.12.3"
 
 [tool.isort]
 profile = "black"
@@ -85,3 +87,16 @@ build-backend = "poetry.core.masonry.api"
 
 #[sqla2uml]
 #scan = demo
+
+
+[tool.deptry]
+ignore_obsolete = [
+]
+ignore_missing = [
+]
+ignore_transitive = [
+  "sqla2uml",
+]
+exclude = [
+    '.tox', 'tests', 'sandbox', 'doc', 'scripts'
+]
