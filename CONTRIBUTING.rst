@@ -15,7 +15,7 @@ Types of Contributions
 Report Bugs
 ~~~~~~~~~~~
 
-Report bugs at https://github.com/sfermigier/sqla2uml/issues.
+Report bugs at https://github.com/abilian/sqla2uml/issues.
 
 If you are reporting a bug, please include:
 
@@ -45,7 +45,7 @@ articles, and such.
 Submit Feedback
 ~~~~~~~~~~~~~~~
 
-The best way to send feedback is to file an issue at https://github.com/sfermigier/sqla2uml/issues.
+The best way to send feedback is to file an issue at https://github.com/abilian/sqla2uml/issues.
 
 If you are proposing a feature:
 
@@ -68,7 +68,8 @@ Ready to contribute? Here's how to set up `sqla2uml` for local development.
 
     $ mkvirtualenv sqla2uml
     $ cd sqla2uml/
-    $ python setup.py develop
+    $ poetry shell
+    $ poetry install
 
 4. Create a branch for local development::
 
@@ -79,8 +80,7 @@ Ready to contribute? Here's how to set up `sqla2uml` for local development.
 5. When you're done making changes, check that your changes pass flake8 and the
    tests, including testing other Python versions with tox::
 
-    $ flake8 sqla2uml tests
-    $ python setup.py test or pytest
+    $ make
     $ tox
 
    To get flake8 and tox, just pip install them into your virtualenv.
@@ -101,10 +101,7 @@ Before you submit a pull request, check that it meets these guidelines:
 1. The pull request should include tests.
 2. If the pull request adds functionality, the docs should be updated. Put
    your new functionality into a function with a docstring, and add the
-   feature to the list in README.rst.
-3. The pull request should work for Python 3.5, 3.6, 3.7 and 3.8, and for PyPy. Check
-   https://travis-ci.com/sfermigier/sqla2uml/pull_requests
-   and make sure that the tests pass for all supported Python versions.
+   feature to the list in README.md.
 
 Tips
 ----

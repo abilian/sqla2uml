@@ -5,7 +5,7 @@ Credits
 Development Lead
 ----------------
 
-* Abilian SAS <sf@abilian.com>
+* Stefane Fermigier (Abilian SAS) <sf@abilian.com>
 
 Contributors
 ------------

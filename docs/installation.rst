@@ -8,7 +8,7 @@ Installation
 Stable release
 --------------
 
-To install SqlAlchemy2UML, run this command in your terminal:
+To install SqlA2UML, run this command in your terminal:
 
 .. code-block:: console
 
@@ -26,19 +26,19 @@ you through the process.
 From sources
 ------------
 
-The sources for SqlAlchemy2UML can be downloaded from the `Github repo`_.
+The sources for SqlA2UML can be downloaded from the `Github repo`_.
 
 You can either clone the public repository:
 
 .. code-block:: console
 
-    $ git clone git://github.com/sfermigier/sqla2uml
+    $ git clone git://github.com/abilian/sqla2uml
 
 Or download the `tarball`_:
 
 .. code-block:: console
 
-    $ curl -OJL https://github.com/sfermigier/sqla2uml/tarball/master
+    $ curl -OJL https://github.com/abilian/sqla2uml/tarball/master
 
 Once you have a copy of the source, you can install it with:
 
@@ -47,5 +47,5 @@ Once you have a copy of the source, you can install it with:
     $ python setup.py install
 
 
-.. _Github repo: https://github.com/sfermigier/sqla2uml
-.. _tarball: https://github.com/sfermigier/sqla2uml/tarball/master
+.. _Github repo: https://github.com/abilian/sqla2uml
+.. _tarball: https://github.com/abilian/sqla2uml/tarball/master
