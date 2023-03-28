@@ -1,6 +1,7 @@
 from sqla2uml.scanner import ClassInfo
 
-EXCLUDED = set()
+# Not used (to be refactored using a config file)
+EXCLUDED: set[ClassInfo] = set()
 
 
 class Generator:

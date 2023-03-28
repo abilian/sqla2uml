@@ -51,7 +51,7 @@ class Scanner:
         self.models = set()
         self.debug_level = debug_level
 
-    def scan(self, module) -> set:
+    def scan(self, module) -> set[ClassInfo]:
         module_name = module.__name__
         self.import_all(module)
 
@@ -76,7 +76,8 @@ class Scanner:
 
         return result
 
-    def import_all(self, module):
+    @staticmethod
+    def import_all(module):
         path = str(Path(module.__file__).parent)
         module_name = str(module.__name__)
 
